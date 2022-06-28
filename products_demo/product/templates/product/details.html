@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/home"> Home </a>
+<a href="/products"> Products </a>
+
+<h1>{{product.Name}} </h1>
+<p>{{product.description}}</p>
+<img src="{{product.Image.url}}" width="120">
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/home"> Home </a>
+<h2>Products</h2>
+<ul>
+    {% for product in products %}
+    <li>
+        <a href="/products/{{product.id}}">
+            {{product.Name}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
