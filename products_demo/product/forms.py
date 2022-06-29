@@ -7,7 +7,9 @@ class register_form(ModelForm):
     class Meta:
         model = user
         fields = '__all__'
-
+        widgets = {
+            'password': PasswordInput(attrs={'class':'form-contro', "min":"8", "max":"20", 'type':'text', 'align':'center', 'placeholder':'password'})
+        }
 
     def __init__(self, *args, **kwargs):
         # first call the 'real' __init__()
